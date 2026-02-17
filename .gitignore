@@ -1,4 +1,4 @@
-.env
+﻿.env
 build/
 allure-report/
 oscript_modules/
@@ -8,3 +8,4 @@ build
 out
 .scannerwork
 src\cf\ConfigDumpInfo.xml
+src\cf\Ext\ParentConfigurations\*.cf
