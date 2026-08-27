@@ -28,7 +28,7 @@ pipeline {
         // }
         stage('Build test base') {
             steps {
-                bat 'chcp 65001\n vrunner init-dev --dt C:\\jenkins-exec\\dt\\1Cv8.dt --src C:\\repo\\jenkins-2026\\src\\cf'
+                bat 'chcp 65001\n vrunner init-dev'
                 //bat 'echo envString = ${envString}'
             }       
         }
