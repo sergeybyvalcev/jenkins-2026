@@ -43,7 +43,19 @@ pipeline {
                     }
                 }   
             }    
-        }   
+        }
+        stage('Vanessa') {
+            steps{
+                script {
+                    try {
+                        bat "chcp 65001\n runner vanessa"
+                    }
+                    catch(Exception Exc) {
+                        currentBuild.result = 'UNSTABLE'
+                    }
+                }   
+            }    
+        } 
 
     }
 }
