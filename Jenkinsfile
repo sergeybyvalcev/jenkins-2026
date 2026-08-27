@@ -9,8 +9,7 @@ pipeline {
 
     post {
         always {
-            allure includeProperties: false, jdk: '', results: [[path: 'out/syntax-check/allure']]
-            junit stdioRetention: '', testResults: 'out/syntax-check/junit/junit.xml'
+            bat 'echo always'
             }
         failure { 
             bat 'echo failure' 
@@ -24,13 +23,7 @@ pipeline {
         stage('stage_1') {
             steps {
                 bat 'echo Message from steps'
-                //bat 'echo envString = ${envString}'
-            }
-        }
-        stage("Build test base") {
-            steps {                
-                bat "chcp 65001\n vrunner init-dev"                
-            }
-        }
+                bat 'echo envString = ${envString}'
+            }       
     }
 }
