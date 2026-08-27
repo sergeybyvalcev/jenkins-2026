@@ -25,5 +25,6 @@ pipeline {
                 bat 'echo Message from steps'
                 bat 'echo envString = ${envString}'
             }       
+        }
     }
 }
