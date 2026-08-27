@@ -17,7 +17,7 @@ pipeline {
         stage('stage_1') {
             steps {
                 bat 'echo Message from steps'
-                bat 'echo envString = ${envString}'
+                //bat 'echo envString = ${envString}'
             }
         }
     }
